@@ -1,4 +1,4 @@
-FROM PLACEHOLDER
+FROM IMAGE_NAME
 
 ENV TOMCAT_HOME /usr/local/tomcat
 ENV PATH $TOMCAT_HOME/bin:$PATH
@@ -12,11 +12,11 @@ ENV LD_LIBRARY_PATH ${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}$TOMCAT_NATIVE_LIBDIR
 # see https://www.apache.org/dist/tomcat/tomcat-$TOMCAT_MAJOR/KEYS
 # see also "update.sh" (https://github.com/docker-library/tomcat/blob/master/update.sh)
 # curl -fsSL 'https://downloads.apache.org/tomcat/tomcat-10/KEYS' | grep "Key fingerprint" | cut -d= -f2 | sed -r 's/ +//g' | sort
-ENV GPG_KEYS placeholder
+ENV GPG_KEYS gpg_keys
 
-ENV TOMCAT_MAJOR placeholder
-ENV TOMCAT_VERSION placeholder
-ENV TOMCAT_SHA512 placeholder
+ENV TOMCAT_MAJOR tomcat_major
+ENV TOMCAT_VERSION tomcat_version
+ENV TOMCAT_SHA512 sha512
 
 RUN set -eux; \
     \
