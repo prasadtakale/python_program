@@ -16,7 +16,7 @@ ENV GPG_KEYS gpg_keys
 
 ENV TOMCAT_MAJOR tomcat_major
 ENV TOMCAT_VERSION tomcat_version
-ENV TOMCAT_SHA512 sha512
+ENV TOMCAT_SHA512 tomcat_sha512
 
 RUN set -eux; \
     \
